@@ -1,0 +1,213 @@
+/* Custom styles beyond Tailwind */
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Smooth transition for all interactive elements */
+button, a {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Custom textarea styles */
+textarea {
+    min-height: 40px;
+    line-height: 1.5;
+    caret-color: #3b82f6;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1A1A1A;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #444;
+}
+
+/* Action button styles */
+.action-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.action-button:hover .w-8 {
+    transform: scale(1.05);
+}
+
+.action-button:hover span {
+    color: white;
+}
+
+/* Button hover effects */
+.action-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.03), transparent);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.action-button:hover::after {
+    opacity: 1;
+}
+
+/* Icon styles */
+.w-8 {
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Custom placeholder color */
+::placeholder {
+    color: #666;
+    opacity: 1;
+}
+
+/* Loading animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.animate-pulse {
+    animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Toast notifications */
+#toast-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.toast {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: #1A1A1A;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transform: translateX(100%);
+    animation: slideIn 0.3s forwards;
+}
+
+.toast.error {
+    border-left: 4px solid #ef4444;
+}
+
+.toast.success {
+    border-left: 4px solid #22c55e;
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Loading overlay */
+#loading-overlay {
+    display: none;
+    z-index: 50;
+    backdrop-filter: blur(4px);
+}
+
+#loading-overlay.active {
+    display: flex;
+}
+
+/* Ensure buttons maintain consistent height */
+.grid button {
+    height: 100%;
+    min-height: 64px;
+}
+
+/* Responsive text adjustments */
+@media (max-width: 640px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+    
+    .grid button {
+        min-height: 56px;
+    }
+}
+
+/* Enhanced focus styles */
+button:focus-visible,
+a:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Prevent text selection on buttons */
+button {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* New Feature Banner hover effect */
+.rounded-full {
+    transition: transform 0.2s ease-in-out;
+}
+
+.rounded-full:hover {
+    transform: translateY(-2px);
+}
+
+/* Smooth transitions */
+.transition-colors {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+}
+
+/* Text color transition */
+.text-gray-200 {
+    transition: color 0.2s ease-in-out;
+}
+
+/* Disabled state styles */
+textarea:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Magic button animation */
+@keyframes sparkle {
+    0% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.2) rotate(180deg); }
+    100% { transform: scale(1) rotate(360deg); }
+}
+
+.fa-wand-magic-sparkles.animating {
+    animation: sparkle 1s ease-in-out;
+}

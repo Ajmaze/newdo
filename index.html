@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolt Clone - Build Anything</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#0A0A0A] text-white min-h-screen">
+    <!-- Navigation -->
+    <nav class="px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center">
+            <span class="text-2xl font-bold">⚡ Bolt</span>
+        </div>
+        <div class="flex items-center gap-4">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-discord"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors ml-4">Sign In</a>
+            <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- New Feature Banner -->
+    <div class="flex justify-center mt-4">
+        <div class="bg-[#1A1A1A] rounded-full px-6 py-2 flex items-center gap-2 hover:bg-[#252525] transition-colors cursor-pointer">
+            <span class="text-2xl">🎨</span>
+            <span class="text-sm">New! Introducing Figma to Bolt</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 mt-16 text-center">
+        <h1 class="text-5xl font-bold mb-4">What do you want to build?</h1>
+        <p class="text-xl text-gray-400 mb-8">
+            Prompt, run, edit, and deploy full-stack <span class="text-white">web</span> and <span class="text-white">mobile</span> apps.
+        </p>
+
+        <!-- Search Box -->
+        <div class="max-w-2xl mx-auto mb-12">
+            <div class="bg-[#1A1A1A] rounded-lg p-4 flex items-center gap-4 hover:bg-[#252525] transition-colors">
+                <textarea 
+                    class="w-full bg-transparent outline-none resize-none placeholder-gray-500 text-lg min-h-[40px]"
+                    placeholder="How can Bolt help you today?"
+                    rows="1"
+                    data-api-input
+                ></textarea>
+                <div class="flex items-center gap-4">
+                    <button class="text-gray-400 hover:text-white transition-colors" title="Share link">
+                        <i class="fas fa-link text-lg"></i>
+                    </button>
+                    <button class="text-gray-400 hover:text-white transition-colors" title="Generate with AI">
+                        <i class="fas fa-wand-magic-sparkles text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto mb-8">
+            <button class="action-button bg-[#1A1A1A] rounded-lg p-6 text-left hover:bg-[#252525] transition-colors" data-action="figma">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 flex items-center justify-center rounded-lg bg-[#4F46E5]">
+                        <i class="fab fa-figma text-white text-lg"></i>
+                    </div>
+                    <span class="text-gray-200">Import from Figma</span>
+                </div>
+            </button>
+            <button class="action-button bg-[#1A1A1A] rounded-lg p-6 text-left hover:bg-[#252525] transition-colors" data-action="expo">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 flex items-center justify-center rounded-lg bg-[#9333EA]">
+                        <i class="fas fa-mobile-screen text-white text-lg"></i>
+                    </div>
+                    <span class="text-gray-200">Build a mobile app with Expo</span>
+                </div>
+            </button>
+            <button class="action-button bg-[#1A1A1A] rounded-lg p-6 text-left hover:bg-[#252525] transition-colors" data-action="astro">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 flex items-center justify-center rounded-lg bg-[#22C55E]">
+                        <i class="fas fa-rocket text-white text-lg"></i>
+                    </div>
+                    <span class="text-gray-200">Start a blog with Astro</span>
+                </div>
+            </button>
+        </div>
+
+        <!-- Additional Actions -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto mb-8">
+            <button class="action-button bg-[#1A1A1A] rounded-lg p-6 text-left hover:bg-[#252525] transition-colors" data-action="vitepress">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 flex items-center justify-center rounded-lg bg-[#EAB308]">
+                        <i class="fas fa-book text-white text-lg"></i>
+                    </div>
+                    <span class="text-gray-200">Create a docs site with Vitepress</span>
+                </div>
+            </button>
+            <button class="action-button bg-[#1A1A1A] rounded-lg p-6 text-left hover:bg-[#252525] transition-colors" data-action="shadcn">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 flex items-center justify-center rounded-lg bg-[#EC4899]">
+                        <i class="fas fa-cube text-white text-lg"></i>
+                    </div>
+                    <span class="text-gray-200">Scaffold UI with shadcn</span>
+                </div>
+            </button>
+            <button class="action-button bg-[#1A1A1A] rounded-lg p-6 text-left hover:bg-[#252525] transition-colors" data-action="slidev">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 flex items-center justify-center rounded-lg bg-[#F97316]">
+                        <i class="fas fa-desktop text-white text-lg"></i>
+                    </div>
+                    <span class="text-gray-200">Draft a presentation with Slidev</span>
+                </div>
+            </button>
+        </div>
+
+        <!-- Bottom Text -->
+        <p class="text-gray-400 mt-12">
+            or start a blank app with your favorite stack
+        </p>
+    </main>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="fixed inset-0 bg-black bg-opacity-50 items-center justify-center hidden">
+        <div class="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="fixed bottom-4 right-4 z-50"></div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
